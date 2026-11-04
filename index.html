@@ -1,43 +1,171 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD 131 - Dynamic Web Fundamentals">
+    <meta name="description" content="Personal homepage for WDD 131 Dynamic Web Fundamentals">
     <meta name="author" content="Tosin Adewale">
-    <link rel="stylesheet" href="./styles/base.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap" rel="stylesheet">
     <title>WDD 131 - Dynamic Web Fundamentals - Tosin Adewale</title>
+
+    <link rel="stylesheet" href="./styles/base.css">
 </head>
+
 <body>
+
     <header>
-        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
-        <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/tosmel2" target="_blank">Linkedin</a></li>
-                <li><a href="https://byupw.instructure.com/" target="_blank">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7" target="_blank">Scripture</a></li>
-                <li><a href="#final-project">Final Project </a></li>
-            </ul>
-        </nav>
+        <h1>WDD 131: Dynamic Web Fundamentals</h1>
     </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="https://www.linkedin.com/in/tosmel2" target="_blank">LinkedIn</a>
+        <a href="https://byupw.instructure.com/" target="_blank">I-Learn</a>
+        <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank">Scripture</a>
+        <a href="#" target="_blank">Final Project</a>
+    </nav>
+
+    <!-- Main Content -->
     <main>
-        <h1>Tosin Adewale</h1>
-        <section class="card">
-            <h2>About the Course</h2>
-            <p>This course covers the fundamentals of dynamic web development, including HTML, CSS, JavaScript, and server-side programming.</p>
-        </section>
-        <section class="card">
-            <h2>Course Objectives</h2>
-            <ul>
-                <li>Understand the basics of web development</li>
-                <li>Learn how to create dynamic web pages</li>
-                <li>Gain proficiency in front-end and back-end technologies</li>
-            </ul>
-        </section>
+
+        <h2 class="main-heading">Tosin Adewale</h2>
+
+        <div class="content-wrapper">
+
+            <!-- About Me Card -->
+            <section class="card about-card">
+
+                <h3 class="card-header">About Me</h3>
+
+                <div class="about-content">
+
+                    <div class="intro-section">
+
+                        <p>
+                            My name is Tosin Adewale and I go by Tosmel.
+                            I was born in Nigeria and currently live in Lagos, Nigeria.
+                            I enjoy learning new things, exploring technology,
+                            programming and spending time with my family.
+                            I love traveling and discovering new opportunities.
+                        </p>
+
+                        <img
+                            src="images/profile.webp"
+                            alt="My profile picture"
+                            class="profile-image"
+                        >
+
+                    </div>
+
+                    <div class="country-section">
+
+                        <h3 class="country-heading">Lagos, Nigeria</h3>
+
+                        <div class="country-content">
+
+                            <figure>
+                                <div class="flag">
+                                    <div class="flag-green"></div>
+                                    <div class="flag-white"></div>
+                                    <div class="flag-green"></div>
+                                </div>
+
+                                <figcaption>
+                                    Official Flag of Nigeria
+                                </figcaption>
+                            </figure>
+
+                            <p>
+                                Nigeria is a country located in West Africa.
+                                It is known for its cultural diversity,
+                                rich history, natural resources and vibrant
+                                population. Nigeria has many interesting
+                                places, traditions and opportunities.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- Web Development Resources Card -->
+            <section class="card resources-card">
+
+                <h3 class="card-header">Web Dev Resources</h3>
+
+                <div class="resources-content">
+
+                    <ul>
+                        <li>
+                            <a href="https://dev.to/" target="_blank">
+                                Dev.to Community
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.smashingmagazine.com/" target="_blank">
+                                Smashing Magazine
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://css-tricks.com/" target="_blank">
+                                CSS Tricks
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.w3schools.com/" target="_blank">
+                                W3 Schools
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://www.udemy.com/" target="_blank">
+                                Udemy
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://picsum.photos/" target="_blank">
+                                Lorem Picsum Image Placeholder
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </section>
+
+        </div>
+
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; <span id="currentyear"></span> Tosin Adewale. Lagos State, Nigeria.</p>
-        <p id="lastmodified"></p>
+
+        <p>
+            &copy; <span id="currentyear"></span> Tosin Adewale, All Rights Reserved, Nigeria
+        </p>
+
+        <p class="last-modified" id="lastModified">
+            Last Modification:
+            <span id="lastModified"></span>
+        </p>
+
     </footer>
+
+    <!-- <script>
+        document.getElementById("lastModified").textContent =
+            document.lastModified;
+    </script> -->
+    <script src="./scripts/getdates.js"></script>
+
 </body>
 </html>
