@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f7f8fc" />
+  <meta name="description" content="A simple, beautiful task management dashboard." />
+  <title>TaskFlow — Task Management</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="TaskFlow home">
+        <span class="brand-icon">✓</span>
+        <span>TaskFlow<span class="brand-dot">.</span></span>
+      </a>
+
+      <div class="workspace-label">WORKSPACE</div>
+
+      <nav class="nav-menu" aria-label="Main navigation">
+        <button class="nav-link active" data-view="all">
+          <span class="nav-icon">▦</span> Overview
+        </button>
+        <button class="nav-link" data-view="today">
+          <span class="nav-icon">◷</span> My Day
+        </button>
+        <button class="nav-link" data-view="upcoming">
+          <span class="nav-icon">▣</span> Upcoming
+        </button>
+        <button class="nav-link" data-view="completed">
+          <span class="nav-icon">✓</span> Completed
+        </button>
+      </nav>
+
+      <div class="sidebar-section">
+        <div class="section-heading">
+          <span>MY CATEGORIES</span>
+        </div>
+        <button class="category-link" data-category="Work">
+          <span class="category-dot work"></span> Work
+        </button>
+        <button class="category-link" data-category="Personal">
+          <span class="category-dot personal"></span> Personal
+        </button>
+        <button class="category-link" data-category="Study">
+          <span class="category-dot study"></span> Study
+        </button>
+        <button class="category-link" data-category="Health">
+          <span class="category-dot health"></span> Health
+        </button>
+      </div>
+
+      <div class="sidebar-bottom">
+        <div class="focus-card">
+          <div class="focus-emoji">✦</div>
+          <strong>Stay focused!</strong>
+          <p>Small steps every day lead to big results.</p>
+        </div>
+        <div class="profile">
+          <div class="avatar">TF</div>
+          <div class="profile-info">
+            <strong>My Workspace</strong>
+            <span>Personal planner</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-left">
+          <button id="menuToggle" class="icon-button mobile-menu"
+            aria-label="Toggle navigation" aria-expanded="false">☰</button>
+          <div class="breadcrumb">Workspace <span>/</span> <strong id="breadcrumbTitle">Overview</strong></div>
+        </div>
+        <div class="topbar-actions">
+          <span class="today-date" id="headerDate"></span>
+          <button class="primary-button" id="addTaskBtn">
+            <span>＋</span> <span class="add-label">New task</span>
+          </button>
+        </div>
+      </header>
+
+      <div class="content-wrap">
+        <section class="welcome-section">
+          <div>
+            <p class="eyebrow" id="welcomeDate">YOUR PRODUCTIVITY SPACE</p>
+            <h1 id="pageTitle">Good things take <span>progress.</span></h1>
+            <p class="welcome-subtitle" id="pageSubtitle">
+              Organize your day, focus on what matters, and get things done.
+            </p>
+          </div>
+          <div class="welcome-decoration" aria-hidden="true">
+            <div class="deco-circle"></div>
+            <span>✳</span>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Task statistics">
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Total tasks</span>
+              <span class="stat-icon purple-icon">▦</span>
+            </div>
+            <div class="stat-number" id="totalTasks">0</div>
+            <p class="stat-caption">Tasks in your workspace</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">In progress</span>
+              <span class="stat-icon blue-icon">◷</span>
+            </div>
+            <div class="stat-number" id="pendingTasks">0</div>
+            <p class="stat-caption">Still to be completed</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Completed</span>
+              <span class="stat-icon green-icon">✓</span>
+            </div>
+            <div class="stat-number" id="completedTasks">0</div>
+            <p class="stat-caption">Tasks finished successfully</p>
+          </article>
+
+          <article class="stat-card">
+            <div class="stat-top">
+              <span class="stat-label">Overdue</span>
+              <span class="stat-icon red-icon">!</span>
+            </div>
+            <div class="stat-number" id="overdueTasks">0</div>
+            <p class="stat-caption">Tasks past their deadline</p>
+          </article>
+        </section>
+
+        <section class="progress-card">
+          <div class="progress-info">
+            <div>
+              <span class="progress-kicker">YOUR DAILY PROGRESS</span>
+              <h2>You're making progress!</h2>
+              <p id="progressMessage">Every completed task counts.</p>
+            </div>
+            <div class="progress-percentage" id="progressPercent">0%</div>
+          </div>
+          <div class="progress-track" role="progressbar"
+            aria-label="Task completion progress" aria-valuemin="0"
+            aria-valuemax="100" aria-valuenow="0" id="progressBar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <div class="progress-footer">
+            <span id="progressCount">0 of 0 tasks completed</span>
+            <span>Keep going ✨</span>
+          </div>
+        </section>
+
+        <section class="tasks-section">
+          <div class="tasks-heading">
+            <div>
+              <h2 id="taskSectionTitle">Your tasks</h2>
+              <p id="taskSectionSubtitle">Everything you need to stay on track.</p>
+            </div>
+            <button class="text-button" id="clearCompletedBtn">Clear completed</button>
+          </div>
+
+          <div class="toolbar">
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <input type="search" id="searchInput"
+                placeholder="Search your tasks..." aria-label="Search tasks" />
+              <kbd>/</kbd>
+            </label>
+
+            <div class="filter-controls">
+              <select id="statusFilter" aria-label="Filter by status">
+                <option value="all">All statuses</option>
+                <option value="pending">Pending</option>
+                <option value="completed">Completed</option>
+              </select>
+              <select id="priorityFilter" aria-label="Filter by priority">
+                <option value="all">All priorities</option>
+                <option value="High">High priority</option>
+                <option value="Medium">Medium priority</option>
+                <option value="Low">Low priority</option>
+              </select>
+              <select id="sortFilter" aria-label="Sort tasks">
+                <option value="date">Sort: Due date</option>
+                <option value="priority">Sort: Priority</option>
+                <option value="created">Sort: Newest first</option>
+                <option value="title">Sort: A–Z</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="task-list" id="taskList" aria-live="polite"></div>
+          <div class="task-list-footer" id="taskListFooter"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="modal-overlay" id="taskModal" aria-hidden="true">
+    <section class="modal" role="dialog" aria-modal="true"
+      aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <div>
+          <p class="eyebrow">MAKE IT HAPPEN</p>
+          <h2 id="modalTitle">Create a new task</h2>
+          <p class="modal-subtitle">A little planning goes a long way.</p>
+        </div>
+        <button type="button" class="icon-button" id="closeModal"
+          aria-label="Close task form">✕</button>
+      </div>
+
+      <form id="taskForm">
+        <input type="hidden" id="taskId" />
+
+        <div class="form-group">
+          <label for="taskTitle">Task title <span class="required">*</span></label>
+          <input type="text" id="taskTitle" maxlength="120" required
+            placeholder="e.g. Finish project presentation" />
+          <small class="field-error" id="titleError"></small>
+        </div>
+
+        <div class="form-group">
+          <label for="taskDescription">Description</label>
+          <textarea id="taskDescription" rows="3" maxlength="1000"
+            placeholder="Add a few details about this task..."></textarea>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="taskCategory">Category</label>
+            <select id="taskCategory">
+              <option value="Work">Work</option>
+              <option value="Personal">Personal</option>
+              <option value="Study">Study</option>
+              <option value="Health">Health</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="taskPriority">Priority</label>
+            <select id="taskPriority">
+              <option value="Low">Low</option>
+              <option value="Medium" selected>Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="taskDueDate">Due date <span class="required">*</span></label>
+          <input type="date" id="taskDueDate" required />
+          <small class="field-error" id="dateError"></small>
+        </div>
+
+        <div class="modal-actions">
+          <button type="button" class="secondary-button" id="cancelModal">Cancel</button>
+          <button type="submit" class="primary-button" id="saveTaskBtn">Create task</button>
+        </div>
+      </form>
+    </section>
+  </div>
+
+  <div class="toast-container" id="toastContainer" aria-live="polite"
+    aria-atomic="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
