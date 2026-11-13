@@ -1,0 +1,97 @@
+
+/* =========================
+   LARGE SCREEN DESIGN
+========================= */
+
+@media screen and (min-width: 700px) {
+
+    /* Header */
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .header-container {
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+
+    /* Hide Hamburger Button */
+
+    #menu-button {
+        display: none;
+    }
+
+
+    /* Navigation */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    nav a:hover {
+        background-color: #71419a;
+    }
+
+
+    /* Main Content */
+
+    main {
+        padding: 0 20px;
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+
+    /* Three Column Grid */
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    figure {
+        padding: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    figure:hover {
+        transform: translateY(-5px);
+    }
+
+    figure img {
+        height: 200px;
+    }
+
+    figcaption {
+        font-size: 14px;
+    }
+
+
+    /* Footer */
+
+    footer {
+        margin-top: 40px;
+        padding: 18px;
+    }
+
+}
