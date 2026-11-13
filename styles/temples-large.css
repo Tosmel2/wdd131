@@ -1,11 +1,5 @@
 
-/* =========================
-   LARGE SCREEN DESIGN
-========================= */
-
 @media screen and (min-width: 700px) {
-
-    /* Header */
 
     header {
         padding: 12px 5%;
@@ -19,15 +13,9 @@
         font-size: 22px;
     }
 
-
-    /* Hide Hamburger Button */
-
     #menu-button {
         display: none;
     }
-
-
-    /* Navigation */
 
     nav {
         display: flex;
@@ -49,8 +37,6 @@
     }
 
 
-    /* Main Content */
-
     main {
         padding: 0 20px;
         margin: 30px auto;
@@ -60,9 +46,6 @@
         font-size: 30px;
         margin-bottom: 25px;
     }
-
-
-    /* Three Column Grid */
 
     .temple-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -85,9 +68,6 @@
     figcaption {
         font-size: 14px;
     }
-
-
-    /* Footer */
 
     footer {
         margin-top: 40px;

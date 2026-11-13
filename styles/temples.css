@@ -1,7 +1,80 @@
 
-/* =========================
-   GOOGLE FONT
-========================= */
+@media screen and (min-width: 700px) {
+
+    header {
+        padding: 12px 5%;
+    }
+
+    .header-container {
+        flex-wrap: nowrap;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    #menu-button {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: auto;
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 10px 18px;
+        border: none;
+        border-radius: 4px;
+    }
+
+    nav a:hover {
+        background-color: #71419a;
+    }
+
+
+    main {
+        padding: 0 20px;
+        margin: 30px auto;
+    }
+
+    h1 {
+        font-size: 30px;
+        margin-bottom: 25px;
+    }
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+
+    figure {
+        padding: 8px;
+        transition: transform 0.3s ease;
+    }
+
+    figure:hover {
+        transform: translateY(-5px);
+    }
+
+    figure img {
+        height: 200px;
+    }
+
+    figcaption {
+        font-size: 14px;
+    }
+
+    footer {
+        margin-top: 40px;
+        padding: 18px;
+    }
+
+}
 
 * {
     margin: 0;
@@ -15,11 +88,6 @@ body {
     color: #222;
     line-height: 1.6;
 }
-
-
-/* =========================
-   HEADER
-========================= */
 
 header {
     background-color: #3b0b63;
@@ -41,11 +109,6 @@ header {
     text-decoration: none;
 }
 
-
-/* =========================
-   HAMBURGER BUTTON
-========================= */
-
 #menu-button {
     background: none;
     border: none;
@@ -54,11 +117,6 @@ header {
     cursor: pointer;
     padding: 0 5px;
 }
-
-
-/* =========================
-   NAVIGATION
-========================= */
 
 nav {
     display: none;
@@ -84,11 +142,6 @@ nav a:hover {
     color: #fff;
 }
 
-
-/* =========================
-   MAIN CONTENT
-========================= */
-
 main {
     max-width: 1000px;
     margin: 20px auto;
@@ -101,12 +154,7 @@ h1 {
     margin-bottom: 20px;
     color: #222;
 }
-
-
-/* =========================
-   TEMPLE GRID
-========================= */
-
+    
 .temple-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -135,10 +183,6 @@ figcaption {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
-
 footer {
     background-color: #3b0b63;
     color: white;
@@ -158,12 +202,7 @@ footer p {
 }
 
 
-/* =========================
-   SMALL SCREEN ADJUSTMENTS
-========================= */
-
 @media screen and (max-width: 400px) {
-
     .logo {
         font-size: 18px;
     }
