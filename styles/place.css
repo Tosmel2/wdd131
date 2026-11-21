@@ -1,5 +1,6 @@
 :root {
-    --secondary-color: #00854a;
+    --primary-color: #00854a;
+    --secondary-color: #22B36B;
     --text-color: #222222;
     --white: #ffffff;
     --light-background: #f8f8f8;
@@ -20,7 +21,7 @@ body {
 }
 
 header {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
     padding: 25px 10px;
@@ -35,7 +36,6 @@ header h1 {
 .green-border {
     height: 12px;
     background-color: var(--secondary-color);
-    background-color: #22B36B;
 }
 
 
@@ -90,11 +90,11 @@ header h1 {
 
 .weather-icon {
     font-size: 65px;
-    margin: 15px 0 20px;
+    margin: 10px 0 20px;
 }
 
 footer {
-    background-color: var(--secondary-color);
+    background-color: var(--primary-color);
     color: var(--white);
     text-align: center;
     padding: 22px 12px;

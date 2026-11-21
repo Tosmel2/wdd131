@@ -40,7 +40,7 @@
     }
 
     .info-card h2 {
-        background-color: var(--secondary-color);
+        background-color: var(--primary-color);
         color: var(--white);
         font-size: 30px;
         padding: 12px 20px;
