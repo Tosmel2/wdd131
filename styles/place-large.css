@@ -40,8 +40,8 @@
     }
 
     .info-card h2 {
-        background-color: #00854a;
-        color: #ffffff;
+        background-color: var(--secondary-color);
+        color: var(--white);
         font-size: 30px;
         padding: 12px 20px;
         margin: 0;
@@ -79,7 +79,7 @@
     .weather-icon {
         display: none;
     }
-
+    
     footer {
         padding: 30px 15px;
     }
