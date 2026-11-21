@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Nigeria, its geography, population, culture and weather.">
+    <meta name="author" content="Tosin Adewale">
+    <title>Nigeria | Land of the Rising Sun</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Nigeria</h1>
+    </header>
+
+    <div class="green-border"></div>
+
+    <main>
+        <section class="hero">
+            <picture class="hero-picture">
+                <source
+                    media="(max-width: 699px)"
+                    srcset="./images/tailed_temur.jpg">
+                <img
+                    src="./images/elephant.jpg"
+                    alt="Nigerian landscape"
+                    class="hero-image">
+            </picture>
+
+            <!-- DATA SECTION -->
+            <section class="info-card data">
+                <h2>Data</h2>
+                <div class="card-content">
+                    <p>
+                        <strong>Area:</strong>
+                        <span>923,768 sq km</span>
+                    </p>
+                    <p>
+                        <strong>Population:</strong>
+                        <span>237.5 million</span>
+                    </p>
+                    <p>
+                        <strong>Capital:</strong>
+                        <span>Abuja</span>
+                    </p>
+                    <p>
+                        <strong>Languages:</strong>
+                        <span>English, Hausa, Yoruba, Igbo</span>
+                    </p>
+                    <p>
+                        <strong>Currency:</strong>
+                        <span>Nigerian Naira</span>
+                    </p>
+                    <p>
+                        <strong>Time Zone:</strong>
+                        <span>UTC+1 (West Africa Time)</span>
+                    </p>
+                    <p>
+                        <strong>Calling Code:</strong>
+                        <span>+234</span>
+                    </p>
+                    <p>
+                        <strong>Internet TLD:</strong>
+                        <span>.ng</span>
+                    </p>
+                </div>
+            </section>
+
+            <!-- WEATHER SECTION -->
+            <section class="info-card weather">
+
+                <h2>Weather</h2>
+                <div class="weather-icon">
+                    🌤️
+                </div>
+
+                <div class="card-content">
+                    <p>
+                        <strong>Temperature:</strong>
+                        <span id="temperature">25-35 °C</span>
+                    </p>
+                    <p>
+                        <strong>Conditions:</strong>
+                        <span>Varies by location</span>
+                    </p>
+                    <p>
+                        <strong>Wind:</strong>
+                        <span id="wind-speed">Varies by location</span>
+                    </p>
+                    <p>
+                        <strong>Wind Chill:</strong>
+                        <span id="wind-chill">Varies by location</span>
+                    </p>
+
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>
+            &copy;<span id="currentyear"></span>
+             Tosin Adewale, Nigeria
+        </p>
+        <p>
+            Last Modification:
+            <span id="lastModified"></span>
+        </p>
+    </footer>
+
+</body>
+</html>
